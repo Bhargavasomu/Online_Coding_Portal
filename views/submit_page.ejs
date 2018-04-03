@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+    <script type="text/javascript" src="/js/submitPage.js"></script>
+</head>
+<body>
+    <form action="/submit/<%= prob_number %>" method="post" enctype="multipart/form-data" id="fileSubmitForm">
+        Select File to upload:
+        <br><br>
+        <input type="file" name="fileToUpload" id="fileToUpload"> <br><br><br>
+        <button type="submit" name="btnSubmit" id="btnSubmit" onclick="return validateForm()"> Submit </button>
+    </form>
+    <div>
+        <p id="err_msg_div"></p>
+    </div>
+    <div id="render_loading_page">
+        <img src="/images/ajax-loader-answer.gif" alt="Loading GIF">
+    </div>
+</body>
+</html>

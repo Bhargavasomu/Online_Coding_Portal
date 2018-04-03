@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+    <div class="container">
+    <% for(var i=0 ; i<probs.length ; i++) { %>
+        <div class="problem">
+            <a href="/problems/<%= i+1 %>" > <%= probs[i].title %> </a>
+            <button type="button" class="submit_button" onclick="changeText( <%= i+1 %> )">Submit</button>
+        </div>
+    <% } %>
+    </div>
+    <script>
+        function changeText(probNumber)
+        {
+            window.location = 'submit/' + probNumber;
+        }
+    </script>
+</body>
+</html>
