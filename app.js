@@ -29,9 +29,6 @@ function checkAuth(req, res, next)  // middleware Function To Check Authenticati
 }
 
 // Routes
-// app.get('/login') to display the form for login
-// app.get('/register') to display the form for registration
-// app.post('/login') to display
 
 app.get('/',routes.main_page);
 
