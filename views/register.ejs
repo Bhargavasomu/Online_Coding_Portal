@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+    <script type="text/javascript" src="/js/registryPage.js"></script>
+</head>
+<body>
+    <form>
+        First Name <br>
+        <input type="text" name="fname" id="ifn" required> <br><br><br>
+        Last Name <br>
+        <input type="text" name="lname" id="iln" required> <br><br><br>
+        Email ID <br>
+        <input type="text" name="email" id="ie" required> <br><br><br>
+        Password <br>
+        <input type="password" name="pswd" id="ip" required> <br><br><br>
+        <button type="button" id="btnSubmit" onclick="sendRegistryCredentials()"> Submit </button>
+    </form>
+    <p class="err"></p>
+</body>
+</html>

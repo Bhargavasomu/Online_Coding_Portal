@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+    <script type="text/javascript" src="/js/loginPage.js"></script>
+</head>
+<body>
+    <form>
+        Email ID <br>
+        <input type="text" name="email" id="input_email"> <br><br><br>
+        Password <br>
+        <input type="password" name="pswd" id="input_pswd"> <br><br><br>
+        <button type="button" name="btnSubmit" id="btnSubmit" onclick="return validateLoginCredentials()"> Submit </button>
+    </form>
+    <p class="err"></p>
+</body>
+</html>
