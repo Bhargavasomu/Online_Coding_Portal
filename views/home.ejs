@@ -4,6 +4,9 @@
     <% include partials/head.ejs %>
 </head>
 <body>
+    <div>
+        <button onclick="callLogout()"> Logout </button>
+    </div>
     <div class="container">
     <% for(var i=0 ; i<probs.length ; i++) { %>
         <div class="problem">
@@ -16,6 +19,10 @@
         function changeText(probNumber)
         {
             window.location = 'submit/' + probNumber;
+        }
+        function callLogout()
+        {
+            window.location = '/logout';
         }
     </script>
 </body>

@@ -76,6 +76,22 @@ exports.verify_login_creds = function(req, res)
 	}
 }
 
+exports.logout = function(req, res)
+{
+	req.session.destroy(function(err)
+	{
+		if(err)
+		{
+			console.log("Error in Logout: " + err);
+		}
+		else
+		{
+			console.log("Logout is a Success");
+			res.redirect('/');
+		}
+	});
+}
+
 exports.render_register_page = function(req, res)
 {
 	res.render('register',{

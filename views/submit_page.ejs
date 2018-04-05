@@ -5,6 +5,9 @@
     <script type="text/javascript" src="/js/submitPage.js"></script>
 </head>
 <body>
+    <div>
+        <button onclick="callLogout()"> Logout </button>
+    </div>
     <form action="/submit/<%= prob_number %>" method="post" enctype="multipart/form-data" id="fileSubmitForm">
         Select File to upload:
         <br><br>
@@ -17,5 +20,11 @@
     <div id="render_loading_page">
         <img src="/images/ajax-loader-answer.gif" alt="Loading GIF">
     </div>
+    <script>
+        function callLogout()
+        {
+            window.location = '/logout';
+        }
+    </script>
 </body>
 </html>

@@ -40,6 +40,8 @@ app.get('/register',routes.render_register_page);
 
 app.post('/register',routes.insert_register_creds);
 
+app.get('/logout',routes.logout);
+
 
 app.get('/dashboard', checkAuth, routes.dashboard);
 
